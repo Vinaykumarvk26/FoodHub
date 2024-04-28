@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #0a0a0a; /* Green color */
+        }
+
+        .qr-code img {
+            max-width: 200px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .payment-info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .payment-info p {
+            font-size: 18px;
+            color: #333; /* Dark gray color */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666; /* Medium gray color */
+            margin-bottom: 10px;
+        }
+
+        .additional-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .additional-info p {
+            color: #444; /* Dark gray color */
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .payment-methods img {
+            max-width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Payment</h1>
+        <div class="qr-code">
+            <img src="qr.png" alt="QR Code">
+        </div>
+        <p>Please scan the QR code to proceed with the payment.</p><br>
+
+        <div class="payment-info">
+            <p><strong>Amount:</strong> 250.00</p>
+            <p><strong>Recipient:</strong> John Doe</p>
+            <p><strong>Reference:</strong> Order #123456</p>
+        </div>
+
+        <div class="additional-info">
+            <h2>Don't let cyber threats steal your financial peace.</h2>
+            <p>"The only secure computer is one that's unplugged, locked in a safe, and buried 20 feet under the ground in a secret location... and I'm not even too sure about that one." - Dennis Huges</p>
+        </div>
+
+        <div class="payment-methods">
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="Mastercard">
+            <img src="paypal.png" alt="PayPal">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle Leftover Food</title>
+    <style>
+        body {
+            background-image: url(anoir-chafik-2_3c4dIFYFU-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+
+
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.867);
+            box-sizing: border-box;
+            width: 50%;
+            
+            
+        }
+
+        .container h1 {
+            margin-top: 0;
+        }
+
+        .recycle-section {
+            margin-top: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .confirm-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no-leftover-button {
+            background-color: #FF5733;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+        h3 {
+            background-color: rgb(175, 175, 98);
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            top: 50px;
+            font-size: 30px;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <h3>"From Plate to Paws: Recycling for Wagging Tails and Happy Hearts! "</h3>
+
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="form-container">
+            <h1>Recycle Leftover Food</h1>
+            <div class="recycle-section">
+                <h2>If you have any leftover food from your order that you would like to recycle, please let us know:</h2>
+                <button class="confirm-button" onclick="confirmRecycle()">I have leftover food</button>
+                <button class="no-leftover-button" onclick="noLeftover()">No leftover food</button>
+                <p id="recycle-status"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function confirmRecycle() {
+            const confirmation = confirm("Are you sure you want to recycle your leftover food?");
+            if (confirmation) {
+                const recycleStatus = document.getElementById('recycle-status');
+                recycleStatus.textContent = "Thank you for your commitment to recycling! A delivery person will be notified to collect the leftover food.";
+
+                setTimeout(() => {
+                    alert("A delivery person has been notified to collect the leftover food.");
+                }, 2000); 
+            }
+        }
+
+        function noLeftover() {
+            const recycleStatus = document.getElementById('recycle-status');
+            recycleStatus.textContent = "Thank you for letting us know!";
+        }
+    </script>
+</body>
+</html>

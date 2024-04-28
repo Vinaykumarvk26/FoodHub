@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link rel="stylesheet" href="item.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item-details">
+            <h1>Item Details</h1>
+            <div class="item-info">
+                <img src="" alt="Item Image" id="item-image">
+                <h2 id="item-name"></h2>
+                <p id="item-price"></p>
+            </div>
+            <p  id="order-placed-message"># Order Placed</p><br>
+            <button class="proceed-button" onclick="proceedToPayment()">Proceed to Payment</button>
+
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const itemName = params.get('itemName');
+        const price = params.get('price');
+        const imageUrl = params.get('imageUrl'); 
+    
+        document.getElementById('item-image').src = imageUrl;
+        document.getElementById('item-name').textContent = itemName;
+        document.getElementById('item-price').textContent = `Price: Rs ${price}`;
+        function proceedToPayment() {
+            window.location.href = "payment.html"; 
+        }
+    </script>
+    
+
+</body>
+
+</html>
